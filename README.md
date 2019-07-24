@@ -44,3 +44,9 @@ For XML/XSD technical files use the XSLT transformation stylesheets. Basic instr
 
 If you have a UML class diagram it can be transformed into a DITA document structured as a description of an Application Profile (AP), explained [here](http://www.ariadne.ac.uk/issue/25/app-profiles/) and described [here](http://www.dublincore.org/specifications/dublin-core/profile-guidelines/) and [here](http://www.dublincore.org/specifications/dublin-core/application-profile-guidelines/). 
 
+The XSLT script generates class descriptions for each class in the model. The following elements are used: class name and documentation, attributes name, documentation and cardinality, generalisation connectors, associative and dependency connectors with their documentation and multiplicity. 
+
+The documentation can contain the bold, italic, list and href HTML tags which will be used as such. 
+Note: the line breaks should always be outside any of the formatting tags.
+  
+
