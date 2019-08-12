@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+"technicalContent/dtd/reference.dtd">
+<reference id="EA_Model13x06x40x02x00">
+  <title>src-ap-vb3.xmi</title>
+
+  <refbody>
+    <section><title>euvoc:XlNotation</title> <table colsep="1" frame="all"
+        rowsep="1">
+        <title>Properties</title>
+
+        <tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+          <colspec colname="1" colnum="1" colwidth="22*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="10*"/>
+
+          <colspec colname="4" colnum="4" colwidth="56*"/>
+
+          <thead>
+            <row rowsep="1">
+              <entry colname="1">Name</entry>
+
+              <entry colname="2">Type</entry>
+
+              <entry colname="3">Cardinality</entry>
+
+              <entry colname="4">Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row rowsep="1">
+              <entry colname="1">dct:created</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:modified</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:endDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:startDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:deprecated</entry>
+
+              <entry colname="2">xsd:boolean</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">rdf:value</entry>
+
+              <entry colname="2">xsd:Literal</entry>
+
+              <entry colname="3">1..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:type</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">1</entry>
+
+              <entry colname="4"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+
+    <section><title>euvoc:XlNote</title> <table colsep="1" frame="all"
+        rowsep="1">
+        <title>Properties</title>
+
+        <tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+          <colspec colname="1" colnum="1" colwidth="22*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="10*"/>
+
+          <colspec colname="4" colnum="4" colwidth="56*"/>
+
+          <thead>
+            <row rowsep="1">
+              <entry colname="1">Name</entry>
+
+              <entry colname="2">Type</entry>
+
+              <entry colname="3">Cardinality</entry>
+
+              <entry colname="4">Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row rowsep="1">
+              <entry colname="1">dct:created</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:modified</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:source</entry>
+
+              <entry colname="2">rdfs:Resource</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:deprecated</entry>
+
+              <entry colname="2">xsd:boolean</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">rdf:value</entry>
+
+              <entry colname="2">xsd:Literal</entry>
+
+              <entry colname="3">1..1</entry>
+
+              <entry colname="4"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+
+    <section><title>rdfs:Resource</title></section>
+
+    <section><title>skos:ConceptScheme</title> <table colsep="1" frame="all"
+        rowsep="1">
+        <title>Properties</title>
+
+        <tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+          <colspec colname="1" colnum="1" colwidth="22*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="10*"/>
+
+          <colspec colname="4" colnum="4" colwidth="56*"/>
+
+          <thead>
+            <row rowsep="1">
+              <entry colname="1">Name</entry>
+
+              <entry colname="2">Type</entry>
+
+              <entry colname="3">Cardinality</entry>
+
+              <entry colname="4">Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row rowsep="1">
+              <entry colname="1">dct:created</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:identifier</entry>
+
+              <entry colname="2">rdfs:Literal</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:modified</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:versionInfo</entry>
+
+              <entry colname="2">rdfs:Literal</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:domain</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:isPartOf</entry>
+
+              <entry colname="2">skos:ConceptScheme</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skosxl:prefLabel</entry>
+
+              <entry colname="2">skosxl:Label</entry>
+
+              <entry colname="3">1..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:isPartOf</entry>
+
+              <entry colname="2">skos:ConceptScheme</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+
+    <section><title>skos:Concept</title> <table colsep="1" frame="all"
+        rowsep="1">
+        <title>Properties</title>
+
+        <tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+          <colspec colname="1" colnum="1" colwidth="22*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="10*"/>
+
+          <colspec colname="4" colnum="4" colwidth="56*"/>
+
+          <thead>
+            <row rowsep="1">
+              <entry colname="1">Name</entry>
+
+              <entry colname="2">Type</entry>
+
+              <entry colname="3">Cardinality</entry>
+
+              <entry colname="4">Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row rowsep="1">
+              <entry colname="1">dct:created</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:modified</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:endDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:startDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:deprecated</entry>
+
+              <entry colname="2">xsd:boolean</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:versionInfo</entry>
+
+              <entry colname="2">rdfs:Literal</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:inScheme</entry>
+
+              <entry colname="2">skos:ConceptScheme</entry>
+
+              <entry colname="3">1..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:definition</entry>
+
+              <entry colname="2">euvoc:XlNote</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:historyNote</entry>
+
+              <entry colname="2">euvoc:XlNote</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:broader</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:example</entry>
+
+              <entry colname="2">euvoc:XlNote</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:replaces</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skosxl:altLabel</entry>
+
+              <entry colname="2">skosxl:Label</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skosxl:hiddenLabel</entry>
+
+              <entry colname="2">skosxl:Label</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:topConceptOf</entry>
+
+              <entry colname="2">skos:ConceptScheme</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skosxl:prefLabel</entry>
+
+              <entry colname="2">skosxl:Label</entry>
+
+              <entry colname="3">1..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:notation</entry>
+
+              <entry colname="2">euvoc:XlNotation</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:related</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:changeNote</entry>
+
+              <entry colname="2">euvoc:XlNote</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:scopeNote</entry>
+
+              <entry colname="2">euvoc:XlNote</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:broader</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:replaces</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skos:related</entry>
+
+              <entry colname="2">skos:Concept</entry>
+
+              <entry colname="3">0..*</entry>
+
+              <entry colname="4"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+
+    <section><title>skosxl:Label</title> <table colsep="1" frame="all"
+        rowsep="1">
+        <title>Properties</title>
+
+        <tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+          <colspec colname="1" colnum="1" colwidth="22*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="10*"/>
+
+          <colspec colname="4" colnum="4" colwidth="56*"/>
+
+          <thead>
+            <row rowsep="1">
+              <entry colname="1">Name</entry>
+
+              <entry colname="2">Type</entry>
+
+              <entry colname="3">Cardinality</entry>
+
+              <entry colname="4">Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row rowsep="1">
+              <entry colname="1">dct:created</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">dct:modified</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:endDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">euvoc:startDate</entry>
+
+              <entry colname="2">xsd:date</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">owl:deprecated</entry>
+
+              <entry colname="2">xsd:boolean</entry>
+
+              <entry colname="3">0..1</entry>
+
+              <entry colname="4"/>
+            </row>
+
+            <row rowsep="1">
+              <entry colname="1">skosxl:literalForm</entry>
+
+              <entry colname="2">rdfs:Literal</entry>
+
+              <entry colname="3">1..1</entry>
+
+              <entry colname="4"/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+  </refbody>
+</reference>
