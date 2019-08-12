@@ -41,21 +41,29 @@
 
 	<xsl:template name="TopLoop">
 		<xsl:param name="rootElt"/>
-		<xsl:for-each select="$rootElt//xmi:XMI/xmi:Extension/elements/element[@xmi:type='uml:Class']">
+		<xsl:for-each select="$rootElt//xmi:XMI/xmi:Extension/elements/element[@xmi:type='uml:Class' or @xmi:type='uml:DataType']">
 			<xsl:variable name="secName" select="@name"/>
 			<xsl:element name="section">
 				<title>
 					<xsl:value-of select="$secName"/>
 				</title>
 				<xsl:if test="properties/@documentation">
-					<xsl:variable name="doc" select="fn:tokenize(properties/@documentation,'&#xA;')"/>
+					<!--<xsl:variable name="doc" select="fn:tokenize(properties/@documentation,'&#xA;')"/>
 					<xsl:for-each select="$doc">
+
 						<xsl:if test=".!=''">
 							<p>
 								<xsl:value-of select="."/>
 							</p>
 						</xsl:if>
-					</xsl:for-each>
+					</xsl:for-each>-->
+					<xsl:variable name="doc0" select="fn:replace(properties/@documentation,'&lt;a href','&lt;p&gt;&lt;xref scope=&#x0022;external&#x0022; href')"/>
+					<xsl:variable name="doc1" select="fn:replace($doc0,'&lt;/a&gt;','&lt;/xref&gt;&lt;/p&gt;')"/>
+					<xsl:variable name="doc2" select="fn:replace($doc1,'font color','foreign otherprops')"/>
+					<xsl:variable name="doc3" select="fn:replace($doc2,'&lt;/font&gt;','&lt;/foreign&gt;')"/>
+					<xsl:variable name="doc4" select="fn:replace($doc3,'nbsp','#x00A0')"/>
+					<xsl:variable name="doc" select="fn:replace($doc4,'\$inet://','')"/>
+					<xsl:value-of select="$doc" disable-output-escaping="yes"/>
 				</xsl:if>
 				<xsl:variable name="array" as="element()*">
 					<xsl:for-each select="links/Generalization">
@@ -136,7 +144,8 @@
 										<xsl:variable name="doc1" select="fn:replace($doc0,'&lt;/a&gt;','&lt;/xref&gt;&lt;/p&gt;')"/>
 										<xsl:variable name="doc2" select="fn:replace($doc1,'font color','foreign otherprops')"/>
 										<xsl:variable name="doc3" select="fn:replace($doc2,'&lt;/font&gt;','&lt;/foreign&gt;')"/>
-										<xsl:variable name="doc" select="fn:replace($doc3,'nbsp','#x00A0')"/>
+										<xsl:variable name="doc4" select="fn:replace($doc3,'nbsp','#x00A0')"/>
+										<xsl:variable name="doc" select="fn:replace($doc4,'\$inet://','')"/>
 <!--
 										<xsl:variable name="doc" select="fn:tokenize(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/documentation/@value,'&#xA;')"/>
 -->
@@ -174,7 +183,8 @@
 										<xsl:variable name="doc1" select="fn:replace($doc0,'&lt;/a&gt;','&lt;/xref&gt;&lt;/p&gt;')"/>
 										<xsl:variable name="doc2" select="fn:replace($doc1,'font color','foreign otherprops')"/>
 										<xsl:variable name="doc3" select="fn:replace($doc2,'&lt;/font&gt;','&lt;/foreign&gt;')"/>
-										<xsl:variable name="doc" select="fn:replace($doc3,'nbsp','#x00A0')"/>
+										<xsl:variable name="doc4" select="fn:replace($doc3,'nbsp','#x00A0')"/>
+										<xsl:variable name="doc" select="fn:replace($doc4,'\$inet://','')"/>
 <!--
 										<xsl:variable name="doc" select="fn:tokenize(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/documentation/@value,'&#xA;')"/>
 -->
