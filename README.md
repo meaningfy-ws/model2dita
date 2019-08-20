@@ -37,7 +37,8 @@ For XML/XSD technical files use the XSLT transformation stylesheets. Basic instr
 `/UML/xmi2dita_00.xslt`
 
 **Input format:**
-`UML v2.1 (XMI v2.1)`  
+`UML v2.5 (XMI v2.5.1)` (tested) 
+`UML v2.1 (XMI v2.1)` (tested)
 
 **Output format:**
 `Application Profile documentation of the UML model in DITA 1.3 technical documentation standard`
@@ -47,6 +48,11 @@ If you have a UML class diagram it can be transformed into a DITA document struc
 The XSLT script generates class descriptions for each class in the model. The following elements are used: class name and documentation, attributes name, documentation and cardinality, generalisation connectors, associative and dependency connectors with their documentation and multiplicity. 
 
 The documentation can contain the bold, italic, list and href HTML tags which will be used as such. 
-Note: the line breaks should always be outside any of the formatting tags.
+**Note:** the line breaks should always be outside any of the formatting tags.
   
+# Processing DITA files
 
+To further generate the HTML/PDF/DOCX/ePub or other (final) format of the documentation please use a DITA editor such as [Adobe Framemaker (paid)](https://www.adobe.com/be_en/products/framemaker.html), [Oxygen (paid)](https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html), [XMLMind (free)](https://www.xmlmind.com/xmleditor/download.shtml) or others. 
+
+# Licence information
+Releases are distributed under [European Union Public License, version 1.2 (EUPL-1.2)](https://joinup.ec.europa.eu/news/understanding-eupl-v12)
