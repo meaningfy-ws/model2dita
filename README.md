@@ -38,7 +38,7 @@ For XML/XSD technical files use the XSLT transformation stylesheets. Basic instr
 
 **Input format:**
 `UML v2.5 (XMI v2.5.1)` (tested) 
-`UML v2.1 (XMI v2.1)` (tested)
+`UML v2.1 (XMI v2.1)` (tested, no longer supported because of the different namespace definition)
 
 **Output format:**
 `Application Profile documentation of the UML model in DITA 1.3 technical documentation standard`
