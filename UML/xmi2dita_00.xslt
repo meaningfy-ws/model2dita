@@ -102,14 +102,14 @@
 			</xsl:variable>
 			<xsl:variable name="valueArray" select="fn:sum($array)"/>
 			<xsl:if test="$valueArray&gt;0">
-				<p>Superclasses:</p>
+				<p><b>Superclasses:</b></p>
 				<xsl:element name="sl">
 					<xsl:for-each select="links/Generalization">
 						<xsl:variable name="connectorId" select="@xmi:id"/>
 						<xsl:variable name="connectorName" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/model/@name"/>
 						<xsl:if test="$connectorName!=$secName">
 							<sli>
-								<xsl:value-of select="$connectorName"/>
+								<i><xsl:value-of select="$connectorName"/></i>
 							</sli>
 						</xsl:if>
 					</xsl:for-each>
@@ -117,7 +117,7 @@
 			</xsl:if>
 
 			<xsl:if test="attributes or links/Association[1] or links/Dependency[1]">
-				<table frame="all" colsep="1" rowsep="1">
+				<table frame="all" colsep="1" rowsep="1" scale="80">
 					<title>Properties</title>
 					<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
 						<colspec colnum="1" colname="1" colwidth="22*"/>
@@ -157,14 +157,18 @@
 								</row>
 							</xsl:for-each>
 							<xsl:for-each select="links/Association">
-								<xsl:call-template name="connectorLoop">
-									<xsl:with-param name="secName" select="$secName" />
-								</xsl:call-template>
+								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id])">
+									<xsl:call-template name="connectorLoop">
+										<xsl:with-param name="secName" select="$secName" />
+									</xsl:call-template>
+								</xsl:if>
 							</xsl:for-each>
 							<xsl:for-each select="links/Dependency">
-								<xsl:call-template name="connectorLoop">
-									<xsl:with-param name="secName" select="$secName" />
-								</xsl:call-template>
+								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id])">
+									<xsl:call-template name="connectorLoop">
+										<xsl:with-param name="secName" select="$secName" />
+									</xsl:call-template>
+								</xsl:if>
 							</xsl:for-each>
 						</tbody>
 					</tgroup>
