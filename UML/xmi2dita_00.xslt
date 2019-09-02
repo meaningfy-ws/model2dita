@@ -11,10 +11,12 @@
 	xmlns:uml="http://www.omg.org/spec/UML/20131001" 
 	xmlns:xmi="http://www.omg.org/spec/XMI/20131001" 
 	exclude-result-prefixes="#all">
-	<xsl:output method="xml" doctype-public="-//OASIS//DTD DITA Reference//EN" doctype-system="technicalContent/dtd/reference.dtd" encoding="UTF-8" byte-order-mark="no" indent="yes" cdata-section-elements="lines"/>
+	<xsl:output method="xml" doctype-public="-//OASIS//DTD DITA Reference//EN" doctype-system="technicalContent/dtd/reference.dtd" encoding="UTF-8" byte-order-mark="no" indent="yes" cdata-section-elements="lines" />
 	<xsl:variable name="sourcedoc" select="/"/>
 	<xsl:variable name="document-uri" select="document-uri(.)"/>
-	<xsl:variable name="in_filename" select="(tokenize($document-uri,'/'))[last()]"/>
+	<!--<xsl:variable name="in_filename" select="(tokenize($document-uri,'/'))[last()]"/>-->
+	<xsl:variable name="in_filename" select="'Application profile'"/>
+	<xsl:variable name="zeroWidthSpace" select="'&#x200B;'"/>
 <!--
 		<xsl:variable name="prefix" select="xmi:XMI/uml:Model/packagedElement/packagedElement[1]/@name"/>
 -->
@@ -26,6 +28,9 @@
         <xsl:element name="reference">
 			<xsl:attribute name="id">
 				<xsl:value-of select="$id4ref"/>
+			</xsl:attribute>
+			<xsl:attribute name="xml:lang">
+				<xsl:value-of select="'en'"/>
 			</xsl:attribute>
 			<xsl:element name="title">
 				<xsl:value-of select="$in_filename"/>
@@ -117,7 +122,7 @@
 			</xsl:if>
 
 			<xsl:if test="attributes or links/Association[1] or links/Dependency[1]">
-				<table frame="all" colsep="1" rowsep="1" scale="80">
+				<table frame="all" colsep="1" rowsep="1" scale="75">
 					<title>Properties</title>
 					<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
 						<colspec colnum="1" colname="1" colwidth="22*"/>
@@ -137,10 +142,10 @@
 								<xsl:variable name="doc" select="fn:tokenize(documentation/@value,'&#xA;')"/>
 								<row rowsep="1">
 									<entry colname="1">
-										<xsl:value-of select="@name"/>
+										<xsl:value-of select="replace(@name,':', fn:concat(':',$zeroWidthSpace))"/>
 									</entry>
 									<entry colname="2">
-										<xsl:value-of select="properties/@type"/>
+										<xsl:value-of select="replace(properties/@type,':', fn:concat(':',$zeroWidthSpace))"/>
 									</entry>
 									<entry colname="3">
 										<xsl:value-of select="concat(bounds/@lower,'..',bounds/@upper)"/>
@@ -180,7 +185,7 @@
 	<xsl:template name="connectorLoop">
 		<xsl:param name="secName"/>
 		<xsl:variable name="connectorId" select="@xmi:id"/>
-		<xsl:variable name="modelNameTarget" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/model/@name"/>
+		<xsl:variable name="modelNameTarget" select="replace(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/model/@name,':', fn:concat(':',$zeroWidthSpace))"/>
 		<xsl:variable name="modelNameSource" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/source/model/@name"/>
 		<xsl:if test="$modelNameTarget!=$secName or $modelNameSource=$modelNameTarget">
 			<xsl:variable name="documentation" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/documentation/@value"/>
@@ -191,7 +196,7 @@
 			</xsl:variable>
 			<row rowsep="1">
 				<entry colname="1">
-					<xsl:value-of select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/@name"/>
+					<xsl:value-of select="replace(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/@name,':', fn:concat(':',$zeroWidthSpace))"/>
 				</entry>
 				<entry colname="2">
 					<xsl:value-of select="$modelNameTarget"/>
