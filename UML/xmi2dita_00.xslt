@@ -122,7 +122,7 @@
 			</xsl:if>
 
 			<xsl:if test="attributes or links/Association[1] or links/Dependency[1]">
-				<table frame="all" colsep="1" rowsep="1" scale="75">
+				<table frame="all" colsep="1" rowsep="1" scale="70">
 					<title>Properties</title>
 					<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
 						<colspec colnum="1" colname="1" colwidth="22*"/>
@@ -162,14 +162,18 @@
 								</row>
 							</xsl:for-each>
 							<xsl:for-each select="links/Association">
-								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id])">
+							<!--
+							-->
+								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id] and ./@start=./@end)">
 									<xsl:call-template name="connectorLoop">
 										<xsl:with-param name="secName" select="$secName" />
 									</xsl:call-template>
 								</xsl:if>
 							</xsl:for-each>
 							<xsl:for-each select="links/Dependency">
-								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id])">
+							<!--
+							-->
+								<xsl:if test="not(preceding::Association[@xmi:id = current()/@xmi:id] and ./@start=./@end)">
 									<xsl:call-template name="connectorLoop">
 										<xsl:with-param name="secName" select="$secName" />
 									</xsl:call-template>
@@ -185,7 +189,7 @@
 	<xsl:template name="connectorLoop">
 		<xsl:param name="secName"/>
 		<xsl:variable name="connectorId" select="@xmi:id"/>
-		<xsl:variable name="modelNameTarget" select="replace(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/model/@name,':', fn:concat(':',$zeroWidthSpace))"/>
+		<xsl:variable name="modelNameTarget" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/model/@name"/>
 		<xsl:variable name="modelNameSource" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/source/model/@name"/>
 		<xsl:if test="$modelNameTarget!=$secName or $modelNameSource=$modelNameTarget">
 			<xsl:variable name="documentation" select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/documentation/@value"/>
@@ -196,10 +200,10 @@
 			</xsl:variable>
 			<row rowsep="1">
 				<entry colname="1">
-					<xsl:value-of select="replace(/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/@name,':', fn:concat(':',$zeroWidthSpace))"/>
+					<xsl:value-of select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/labels/@mt"/>
 				</entry>
 				<entry colname="2">
-					<xsl:value-of select="$modelNameTarget"/>
+					<xsl:value-of select="replace($modelNameTarget,':', fn:concat(':',$zeroWidthSpace))"/>
 				</entry>
 				<entry colname="3">
 					<xsl:value-of select="/xmi:XMI/xmi:Extension/connectors/connector[@xmi:idref=$connectorId]/target/type/@multiplicity"/>
