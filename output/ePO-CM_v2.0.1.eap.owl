@@ -6,103 +6,596 @@
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:o="http://publications.europa.eu/ontology/eProcurement#"
          xml:base="http://publications.europa.eu/ontology/eProcurement">
-   <owl:Class rdf:about="eProcurement Ontology - OP Domain Model:Class1"/>
-   <owl:Class rdf:about="ccev:Criterion"/>
-   <owl:Class rdf:about="ccev:Criterion Property"/>
-   <owl:Class rdf:about="ccev:Criterion Property Datum"/>
-   <owl:Class rdf:about="ccev:Criterion Property Group"/>
-   <owl:Class rdf:about="ccev:Evidence"/>
-   <owl:Class rdf:about="ccev:Legislation"/>
-   <owl:Class rdf:about="epo: Project Procurement"/>
-   <owl:Class rdf:about="epo:Additional Document"/>
-   <owl:Class rdf:about="epo:Agent"/>
-   <owl:Class rdf:about="epo:Award Criterion"/>
-   <owl:Class rdf:about="epo:Award Criterion Evaluation Dimension"/>
-   <owl:Class rdf:about="epo:Award Decision"/>
-   <owl:Class rdf:about="epo:Buyer"/>
-   <owl:Class rdf:about="epo:Buyer Profile"/>
-   <owl:Class rdf:about="epo:Call for Competition"/>
-   <owl:Class rdf:about="epo:Call for Expression of Interest"/>
-   <owl:Class rdf:about="epo:Candidate Short List"/>
-   <owl:Class rdf:about="epo:Central Purchasing Body"/>
-   <owl:Class rdf:about="epo:Contract"/>
-   <owl:Class rdf:about="epo:Contract Award Notice"/>
-   <owl:Class rdf:about="epo:Contract Conditions"/>
-   <owl:Class rdf:about="epo:Contract Modification"/>
-   <owl:Class rdf:about="epo:Contract Modification Notice"/>
-   <owl:Class rdf:about="epo:Contract Notice"/>
-   <owl:Class rdf:about="epo:Contract Template"/>
-   <owl:Class rdf:about="epo:Contract Terms"/>
-   <owl:Class rdf:about="epo:Descriptive Document"/>
-   <owl:Class rdf:about="epo:Design Contest"/>
-   <owl:Class rdf:about="epo:Document"/>
-   <owl:Class rdf:about="epo:Draft CV"/>
-   <owl:Class rdf:about="epo:Dynamic Purchase System"/>
-   <owl:Class rdf:about="epo:EAuction"/>
-   <owl:Class rdf:about="epo:eCatalogue"/>
-   <owl:Class rdf:about="epo:Economic Operator"/>
-   <owl:Class rdf:about="epo:Economic Operator Short List"/>
-   <owl:Class rdf:about="epo:Electronic Means of Communication"/>
-   <owl:Class rdf:about="epo:ESPD Request"/>
-   <owl:Class rdf:about="epo:ESPD Response"/>
-   <owl:Class rdf:about="epo:Evaluation Board"/>
-   <owl:Class rdf:about="epo:Evaluation Detail"/>
-   <owl:Class rdf:about="epo:Evaluation Report"/>
-   <owl:Class rdf:about="epo:Evaluation System"/>
-   <owl:Class rdf:about="epo:Evaluation Terms"/>
-   <owl:Class rdf:about="epo:Evaluator"/>
-   <owl:Class rdf:about="epo:Exclusion Ground"/>
-   <owl:Class rdf:about="epo:Financial Account"/>
-   <owl:Class rdf:about="epo:Financial Tender Document"/>
-   <owl:Class rdf:about="epo:Framework Agreement"/>
-   <owl:Class rdf:about="epo:Framework Agreement Procedure Terms"/>
-   <owl:Class rdf:about="epo:Framework Agreement Terms"/>
-   <owl:Class rdf:about="epo:Funds Identification"/>
-   <owl:Class rdf:about="epo:Invitation to Tender"/>
-   <owl:Class rdf:about="epo:Lot"/>
-   <owl:Class rdf:about="epo:Lot Group"/>
-   <owl:Class rdf:about="epo:Mark"/>
-   <owl:Class rdf:about="epo:Notice"/>
-   <owl:Class rdf:about="epo:Participation Criterion"/>
-   <owl:Class rdf:about="epo:Pre-award catalogue "/>
-   <owl:Class rdf:about="epo:Pre-award catalogue request"/>
-   <owl:Class rdf:about="epo:Prior Information Notice"/>
-   <owl:Class rdf:about="epo:Procedure"/>
-   <owl:Class rdf:about="epo:Procedure Information"/>
-   <owl:Class rdf:about="epo:Procedure Terms"/>
-   <owl:Class rdf:about="epo:Procurement Criterion"/>
-   <owl:Class rdf:about="epo:Procurement Criterion Property"/>
-   <owl:Class rdf:about="epo:Procurement Criterion Property Group"/>
-   <owl:Class rdf:about="epo:Procurement Document"/>
-   <owl:Class rdf:about="epo:Procurement Service Provider"/>
-   <owl:Class rdf:about="epo:Procurement Value"/>
-   <owl:Class rdf:about="epo:Purchase Contract"/>
-   <owl:Class rdf:about="epo:Purpose"/>
-   <owl:Class rdf:about="epo:Request for Participation"/>
-   <owl:Class rdf:about="epo:Review Terms"/>
-   <owl:Class rdf:about="epo:Selection Criterion"/>
-   <owl:Class rdf:about="epo:Selection Criterion Property"/>
-   <owl:Class rdf:about="epo:Subcontract Terms"/>
-   <owl:Class rdf:about="epo:Submission Terms"/>
-   <owl:Class rdf:about="epo:Submission Terms"/>
-   <owl:Class rdf:about="epo:Technical Specifications"/>
-   <owl:Class rdf:about="epo:Technical Tender Document"/>
-   <owl:Class rdf:about="epo:Technique"/>
-   <owl:Class rdf:about="epo:Tender"/>
-   <owl:Class rdf:about="epo:Tender Document"/>
-   <owl:Class rdf:about="epo:Tender Evaluation"/>
-   <owl:Class rdf:about="epo:Tender Evaluation Rank"/>
-   <owl:Class rdf:about="epo:Tenderer"/>
-   <owl:Class rdf:about="epo:Winner"/>
-   <owl:Class rdf:about="foaf:Group"/>
-   <owl:Class rdf:about="foaf:Person"/>
-   <owl:Class rdf:about="ocds:Contact Point"/>
-   <owl:Class rdf:about="org:Organization"/>
-   <owl:Class rdf:about="org:Site"/>
-   <owl:Class rdf:about="ubl:Address Line"/>
-   <owl:Class rdf:about="ubl:Country"/>
-   <owl:Class rdf:about="ubl:Location Coordinate"/>
-   <owl:Class rdf:about="ubl:Period"/>
-   <owl:Class rdf:about="ubl:Postal Address"/>
-   <owl:Class rdf:about="vcard:vCard"/>
+   <owl:Class rdf:ID="EAID_4AFE1052_EFB1_4f83_921E_6C791B35908D">
+      <rdfs:label>Class1</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_1575C133_A836_46c6_B1FD_8B54B4D7F3EB">
+      <rdfs:label>Criterion</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A condition that needs to be answered for evaluation purposes.
+
+Additional Information: this can be used for transparency and evaluation of  PRICE CRITERIA
+(list of criteria related to price) Selection and Award Criterion that are weighted.
+(WG approval 22/06/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_042360F0_BF1E_443d_9375_B99D86DC047A">
+      <rdfs:label>Criterion Property</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Specific information needed to measure a criterion.
+
+(WG approval 22/06/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F1C29234_9A79_49fd_860E_E79AB4F9240D">
+      <rdfs:label>Criterion Property Datum</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The value  provided for a criterion property.
+
+(WG approval 22/06/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_C10DDC07_8A11_40a6_BBA3_E8A2ADB0B38B">
+      <rdfs:label>Criterion Property Group</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An organised structure of related criterion properties.
+
+(WG approval 22/06/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_438A4790_CE7D_4b5e_BD4B_99567C80AC7D">
+      <rdfs:label>Evidence</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_E616E740_494E_489e_8809_57823D2881DE">
+      <rdfs:label>Legislation</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The provision which confers competence to adopt the act in question.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_A257A484_3866_4e6d_8B34_8A7427E5E44D">
+      <rdfs:label> Project Procurement</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A set of linked procurement activities.
+
+WG 12/09/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_C628AB50_9C11_49cb_B9CD_6C02DF0664F4">
+      <rdfs:label>Additional Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_CF8B9D9C_5E8E_4e78_9A6F_8D1C3B844F69">
+      <rdfs:label>Agent</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Members of an evaluation committee (e.g..: jury members) that take into account the requirements, specifications and conditions of the tenders in order to evaluate them. 
+
+(Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_A3C531C4_7D75_44cc_BEA3_2E08AC2FE6B2">
+      <rdfs:label>Award Criterion</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Describes a rule or a condition to be taken into account for the award decision.
+
+(WG approval 27/04/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_93EF08B0_0DC8_45ad_9174_FBF4E4435B6E">
+      <rdfs:label>Award Criterion Evaluation Dimension</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The information needed to ponder award criteria dimensions, 
+
+The award is computed on the basis of different several dimensions such as quality, price and cost. 
+
+One dimension, e.g. quality, provides the information necessary to measure how the overall quality criteria will be evaluated, as opposed to the individual quality criterion (which has its own weight and threshold).</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_B7007F0A_6B30_4fc5_8AC2_D7789CCFB7F8">
+      <rdfs:label>Award Decision</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+Resolution of the buyer as to the result of the procurement procedure.
+
+(WG approval 14/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_96B284C4_E759_4bad_9655_04521F703750">
+      <rdfs:label>Buyer</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Organisation that manages the budget allocated for the procedure and pays for the items being procured.
+
+WG  14/11/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_E6792665_435C_46ba_87AB_72BC9CB60BDA">
+      <rdfs:label>Buyer Profile</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Website address where the buyer publishes information on its procurement procedures and general information.
+
+WG approval 04/05/2018
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_2430BC8A_4085_439d_8CAD_938401FF2F7A">
+      <rdfs:label>Call for Competition</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A public announcement of the launch of a procurement procedure.
+
+(WG approval 14/05/2017)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_7B337246_0D3C_4cd2_A4B9_FB478B0A319E">
+      <rdfs:label>Call for Expression of Interest</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A call to potential providers of goods and/or services to register interest in supplying them. It is a document that describes a set of requirements or specifications and that service providers have to demonstrate their ability to meet those requirements. 
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_00A4E2DE_73D0_4111_A098_398A2914E250">
+      <rdfs:label>Candidate Short List</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The tenderers that have been selected in a two stage procedure.
+
+Additional information: the types of procedures this shortlist applies to are restricted procedures, competitive procedures with negotiation, competitive dialogue procedures and innovation partnerships.
+
+(WG approval 27/07/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_C84E9D56_7412_4d8e_9A5C_0F684174C4AC">
+      <rdfs:label>Central Purchasing Body</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A procuring entity that provides centralised purchasing activities and, possibly, ancillary purchasing activities for other procuring entities.
+
+WG approval 18/05/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_76E69B0B_4A6E_4901_8372_75A07B6AB066">
+      <rdfs:label>Contract</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A voluntary, deliberate, and legally binding agreement between two or more competent parties.
+
+(WG approval 01/06/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_17200098_B77F_4218_B4D2_1E839A11AAB9">
+      <rdfs:label>Contract Award Notice</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An announcement of the award of a contract by a procuring entity.
+
+(WG approval 18/05/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_909CCB14_FA98_4875_94AA_372D34E95C2A">
+      <rdfs:label>Contract Conditions</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_CBCC7420_219D_492a_97D7_6A9872E8AEE8">
+      <rdfs:label>Contract Modification</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Modification of a contract during its term.
+
+(WG approval 01/06/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F013B642_13CD_4c23_9946_FD6B8813976A">
+      <rdfs:label>Contract Modification Notice</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An announcement of the modification of a contract/concession during during its term by a procuring entity.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_FEF1B0F3_B672_44b2_BC26_2B0AC11765D6">
+      <rdfs:label>Contract Notice</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An announcement of the launch of a procurement procedure by a procuring entity.
+
+(WG approval 18/05/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_82902F52_8562_4eb2_99C9_76550B76B2B0">
+      <rdfs:label>Contract Template</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_40588AD6_810D_4fd6_BA64_B05755E636F2">
+      <rdfs:label>Contract Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Conditions and stipulations defining particularities of the post award phase.
+
+(WG decision 23/11/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_CC8D4FE5_EC68_407a_B44C_F4C84200F5A3">
+      <rdfs:label>Descriptive Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Describes the object of the procurement and the properties of the procedure.
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_44E7963D_28F5_4263_835A_24C87816F40C">
+      <rdfs:label>Design Contest</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_91FCDF9A_77D0_4ad5_B217_37E957B3B448">
+      <rdfs:label>Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Active and dynamic files representing information.
+
+(Pending to review by the WG)
+
+This other definition comes from ISA2, we want to propose it for discussion to the WG: 
+
+&lt;b&gt;a set of interrelated Business Information &lt;/b&gt;representing the business facts, data, or opinions, in any medium or form, including textual, numerical, graphic, cartographic, narrative, or audio-visual forms that the capability exchanges with other capabilities to support the execution of value streams.
+
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_9B2D0656_1417_4e01_8CAD_79BA45A18E49">
+      <rdfs:label>Draft CV</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_C06EA401_3F55_4448_B4FF_BB7EA510A155">
+      <rdfs:label>Dynamic Purchase System</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An electronic system that is set up by a procuring entity which lists the economic operators that satisfy the selection and exclusion criteria.   This technique then allows the purchase via consultation of the listed tenderers using award criteria.
+
+(WG approval 13/07/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_7D8A2312_4686_49e6_B174_97BCF34F4CE4">
+      <rdfs:label>EAuction</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A repetitive technique in which new prices, revised downwards, and/or new values concerning certain elements of tenders are bid on-line.
+
+(WG approval 20/07/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_90538F76_F7D5_4a78_9D73_83596527258E">
+      <rdfs:label>eCatalogue</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Structured electronic format which allows for  automatic and electronic processing of listed information regarding goods and services.
+
+(WG approval 10/08/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_70945F18_A0FC_48fd_9284_B6F7309F5985">
+      <rdfs:label>Economic Operator</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Any natural or legal person or public entity or group of such persons and/or entities, including any temporary association of undertakings, which offers the execution of works and/or a work, the supply of products or the provision of services on the market.
+
+(WG approval 07/09/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_810158F8_6200_4e57_B2AA_1CD81B5C545E">
+      <rdfs:label>Economic Operator Short List</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The candidates and tenders that are considered for a given procedure.
+
+(WG approval 27/07/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_571E0BA0_00DB_4060_9B85_832916390909">
+      <rdfs:label>Electronic Means of Communication</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Software solutions and electronic devices for communication and exchange of information between contracting authorities and economic operators.
+
+Additional Information:
+These tools can be used for, at least, these five situations:
+
+1. The URL where to access the procurement documents.
+2. Access point for the submission of tender documents.
+3. Download URL, to indicate where to get a tool to communicate with the CA
+4. The URI of the system used by a Technique to allow EOs to exchange information with the CA (e.g. eAuction and DPS Systems)
+5. Exchange of information between CA and EO for questions and clarifications
+
+WG Approval 2019-02-05</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_76382EAA_E11D_4690_9935_235D712B84DF">
+      <rdfs:label>ESPD Request</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">European Single Procurement Document Request. Specification by the Procuring Entity of the exclusion and selection criteria for a Procurement Procedure. 
+
+(Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_5E14B45E_D907_4abe_B477_B6D38C53C2A7">
+      <rdfs:label>ESPD Response</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">European Single Procurement Document Response. The declaration of the Economic Operator that it meets all the exclusion and selection criteria specified in the ESPD Request.
+
+(Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F11BD59C_AA64_47f2_89FC_FCAA78104C30">
+      <rdfs:label>Evaluation Board</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_980D17A5_B4D5_4b49_A27C_2CB37C3A4B70">
+      <rdfs:label>Evaluation Detail</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_EBDFEE47_C1E3_45a0_9C9D_FABF46EA83B8">
+      <rdfs:label>Evaluation Report</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The Evaluation Board publishes the result of tenders after completion of its evaluation.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_DBFE5B93_B497_4567_9D5F_0F4114618130">
+      <rdfs:label>Evaluation System</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An automated solution that assesses structured information in tenders and proposes results.
+
+WG approval 20/11/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_0C735489_15DC_40a7_A94E_A9202738B188">
+      <rdfs:label>Evaluation Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Conditions and stipulations defining particularities of the tender evaluation.
+
+(WG approval 23/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_4DBA5BF3_592E_42b6_894F_02EF9F8CCC81">
+      <rdfs:label>Evaluator</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_715A3156_5F19_4b35_B5F3_1BED9F96AB90">
+      <rdfs:label>Exclusion Ground</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Describes a legal requirement to be met by the economic operator to be a candidate in the procurement procedure.
+WG approval 31/10/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_76EB6A09_36C1_4e21_819B_07622B7FEC1D">
+      <rdfs:label>Financial Account</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(To be discussed during eSubmission WG decision 28/11/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_42351A1C_86CC_4f93_8219_AABEF142E04A">
+      <rdfs:label>Financial Tender Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_D2862D88_92C5_4206_B142_36CDBA0095B8">
+      <rdfs:label>Framework Agreement</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The terms governing contracts, reached between one more buyers and one or more economic operators during a given period.
+
+(WG approval 05/12/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_7BB9C92D_7BA0_4ef4_AB51_41D7E693C1B0">
+      <rdfs:label>Framework Agreement Procedure Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_FA070646_D88B_493f_96AB_8417E2069155">
+      <rdfs:label>Framework Agreement Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Reason for extending time limits.
+
+Additional Information: in exceptional cases related, for example, to framework agreements that exceed the legal limits, these limits need to be justified.. (Four years in the case of the general procurement directive, seven years in the case of the defence directive, and eight years in the case of the sectoral directive.).
+
+WG Approval 2019-19-02
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_495BBB92_468A_4f08_9330_A0C75730B97A">
+      <rdfs:label>Funds Identification</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+Pending to review by the WG</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_A3DE93EC_6FEC_4735_BABB_FCEDE1946261">
+      <rdfs:label>Invitation to Tender</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_31976DD6_F85A_4940_AC62_FA4769B4D88C">
+      <rdfs:label>Lot</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A qualitative, quantitative or strategic subdivision of the goods, services or works to be procured, allowing the award of one or more contracts.
+
+WG approval 12/09/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_2046EF02_69A1_4fa0_BF42_2A6E50CAF4E6">
+      <rdfs:label>Lot Group</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_71D0C6AF_4232_4a77_949F_57365FC7C693">
+      <rdfs:label>Mark</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_67E2E371_0A7D_4004_B8A4_6F969F59938C">
+      <rdfs:label>Notice</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Notification or a formal declaration of someone's intention to end an agreement, typically one concerning employment or tenancy, at a specified time.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_908B5503_B706_401e_84FF_E48FCB134832">
+      <rdfs:label>Participation Criterion</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F0B8801A_F55A_42ef_8303_9C332DD515FA">
+      <rdfs:label>Pre-award catalogue </rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_9E0845AD_83BD_4395_A948_5F5945FD3750">
+      <rdfs:label>Pre-award catalogue request</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_5983899F_3291_4d88_9CAC_77BD3A82D0D0">
+      <rdfs:label>Prior Information Notice</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Notice which sets out the contracting authority's purchasing intentions. It is used by contracting authorities to provide suppliers with information about a procurement process. 
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_8F3A6A54_584E_4f65_80B0_0C345D6703F4">
+      <rdfs:label>Procedure</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A series of legally defined administrative steps conducted  to conclude one or more contracts.
+
+(WG approval 07/09/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_4F81C811_16F5_4332_BAEA_9843D331872F">
+      <rdfs:label>Procedure Information</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_952A6222_7ED2_4ca4_A084_E51BAA1CF00D">
+      <rdfs:label>Procedure Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Conditions and stipulations defining particularities of the procedure.
+
+(WG approval 23/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_D787981E_DCA2_40b3_83AA_6740E666BCB4">
+      <rdfs:label>Procurement Criterion</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_D8E807BC_2B8A_48ac_8515_9F8AB393080E">
+      <rdfs:label>Procurement Criterion Property</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_A41D3E84_E949_4ce0_9CB7_33D222B9FBE3">
+      <rdfs:label>Procurement Criterion Property Group</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_122536CB_B61F_4219_A56C_6D68CD1BEAF3">
+      <rdfs:label>Procurement Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A set of interrelated business information produced or referred to by a buyer to describe the requirements and conditions of a procurement procedure.
+
+(WG approval 07/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_49EC0F16_408C_4b28_B611_0048946DC070">
+      <rdfs:label>Procurement Service Provider</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_EF6D8DA9_F7F6_42e7_88CB_7C8DD20D663D">
+      <rdfs:label>Procurement Value</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Monetary amount related to a procurement.
+
+(WG approval 05/12/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_0541321A_FDA1_4521_943D_6D37C8C9B3F8">
+      <rdfs:label>Purchase Contract</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_D461B820_4E2F_4cfe_BD2A_3CD31A751F07">
+      <rdfs:label>Purpose</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The description of the objectives related to a procurement.
+
+(WG approval 05/12/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_54DB9B44_19BA_451d_B79F_748D64BF4965">
+      <rdfs:label>Request for Participation</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_BBC027DB_D53F_4807_8E78_E7E38243C894">
+      <rdfs:label>Review Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Conditions and stipulations defining particularities of the review.
+
+(WG approval 23/11/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_87CEFE23_FABD_41fc_8BC0_71EA7F9C3122">
+      <rdfs:label>Selection Criterion</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Describes a capacity requirement that the economic operator needs to fulfill to participate in the procedure.
+
+WG approval 31/10/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_5C909F01_8401_454e_A7FC_53B9E218ABC6">
+      <rdfs:label>Selection Criterion Property</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_361EB2A1_DEC9_43b6_9E5F_29ED464CE561">
+      <rdfs:label>Subcontract Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A concept to describe the main information regarding the share of parts of the contract to third parties.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_73DBABC4_3826_4d51_BE77_7A312568C7DA">
+      <rdfs:label>Submission Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Conditions and stipulations defining particularities of the submission of tenders, expression of interests, etc.
+
+Additional information: Receipt Deadline establishes the time limit for the reception by the buyer of Tenders, Expressions of Interests, Requests for Participation and Requests for clarification.
+
+(WG approval 12/12/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_394D9649_C70C_437b_8DE2_A3943CDEC6CA">
+      <rdfs:label>Submission Terms</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F5AE8AA9_91EE_4cb3_AE98_14D4AF1A77C1">
+      <rdfs:label>Technical Specifications</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_25714AAB_4160_44b8_86DB_617F81FACE33">
+      <rdfs:label>Technical Tender Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Not included in the Glossary. Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_3780AA50_D898_4068_B300_47B46651CA0A">
+      <rdfs:label>Technique</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Method by which a procurement contract is established.
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_9D96D0CB_35A7_4908_87DB_EE8B4980064B">
+      <rdfs:label>Tender</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Information submitted by the economic operator to specify its offer in response to the call for tender.
+
+(WG approval 07/11/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_ED760921_754E_40d4_931D_7B90E1F1B8EF">
+      <rdfs:label>Tender Document</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+
+(Pending to review by the WG)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_B7A33173_B5DD_4bad_A3E3_0C864FBFA4CB">
+      <rdfs:label>Tender Evaluation</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_40005EA8_B2E8_4efe_A281_06BECF5F39FC">
+      <rdfs:label>Tender Evaluation Rank</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_BB22A753_783A_4d79_B795_B4D7DEE0BA53">
+      <rdfs:label>Tenderer</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">An economic operator that has submitted a tender.
+
+(WG approval 07/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_56C62F68_CA40_4dde_B4CE_1CC777975EF3">
+      <rdfs:label>Winner</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">The tenderer to whom the contract is awarded.
+
+(WG approval 20/11/2018)</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_D3B2106B_CE09_4b29_B900_F80C21FAA512">
+      <rdfs:label>Group</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_896A1B80_70CC_4269_A2E4_C86ACC144759">
+      <rdfs:label>Person</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_107DA37F_667F_4654_8E47_FBD07D043018">
+      <rdfs:label>Contact Point</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_C7D76306_6AB8_46c8_A491_CB10E0B9E455">
+      <rdfs:label>Organization</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.
+
+(WG approval 23/11/2018).
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_6E3534F8_4E9E_429e_A7ED_48182004A2B6">
+      <rdfs:label>Site</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_DC7E51B2_6B57_45cc_9CF5_95418C88665C">
+      <rdfs:label>Address Line</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_F4B1BCEA_95D3_4f60_B803_BC34C668D6B4">
+      <rdfs:label>Country</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A country is one of the political units which the world is divided into, covering a particular area of land.
+
+WG approval  08/06/2018</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_6CBBB5EC_83A3_4670_858D_59EBE773040C">
+      <rdfs:label>Location Coordinate</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_116B30E9_5947_4510_847A_7E8C5EEC0432">
+      <rdfs:label>Period</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">Duration.
+
+(WG approval 05/12/2018)
+</rdfs:comment>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_29678A10_6473_461a_BE84_76269B5BBD68">
+      <rdfs:label>Postal Address</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
+   <owl:Class rdf:ID="EAID_75F1563C_C5AA_420a_BF1E_F6DF321169B5">
+      <rdfs:label>vCard</rdfs:label>
+      <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+   </owl:Class>
 </rdf:RDF>

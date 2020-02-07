@@ -19,7 +19,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
-    exclude-result-prefixes="xs math xd xsl uml xmi umldi dc"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions"
+    exclude-result-prefixes="xs math xd xsl uml xmi umldi dc fn"
     
     xmlns:uml="http://www.omg.org/spec/UML/20131001"
     xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
@@ -32,6 +33,8 @@
     
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    
+    
     version="3.0">
     
     <xd:doc scope="stylesheet">
@@ -110,13 +113,15 @@
     <xsl:template name="elementLoop">
         <!--<xsl:param name="rootElt"/>-->
         <xsl:for-each
-            select="//xmi:Extension/elements/element[@xmi:type = 'uml:Class']">            
-            <xsl:variable name="className" select="@name"/>
-            <xsl:variable name="idref" select="@xmi:idref"/>                    
+            select="//xmi:Extension/elements/element[@xmi:type = 'uml:Class']">
+            
+                    
             
             <xsl:call-template name="classDefinition">
-                <xsl:with-param name="className" select="$className"/>
-                <xsl:with-param name="idref" select="$idref"/>
+                <xsl:with-param name="classElement" select="."/>
+                
+                <!--<xsl:with-param name="className" select="$className"/>
+                <xsl:with-param name="idref" select="$idref"/>-->
             </xsl:call-template>
         </xsl:for-each>
 
@@ -127,25 +132,52 @@
         <xd:desc>
             <xd:p> This template creates a class definition </xd:p>
         </xd:desc>
-        <xd:param name="className"/>
-        <xd:param name="idref"/>
+        <!--<xd:param name="className"/>
+        <xd:param name="idref"/>-->
+        <xd:param name="classElement"/>
     </xd:doc>
     
     <xsl:template name="classDefinition">
-        <xsl:param name="className"/>
-        <xsl:param name="idref"/>
-
+        <xsl:param name="classElement"/>
+<!--        <xsl:param name="className"/>
+        <xsl:param name="idref"/>-->
+        
+        <xsl:variable name="className" select="$classElement/@name"/>
+        <xsl:variable name="idref" select="$classElement/@xmi:idref"/>  
         
         <xsl:variable name="packageName" select="//packagedElement[@xmi:id = $idref]/../@name"/>
-        
         <xsl:variable name="classURI" select="concat($packageName, ':', $className)"/>
+    
+        <xsl:variable name="documentation"
+            select="$classElement/properties/@documentation"/>
         
-         
         
-        
-        <owl:Class rdf:about="{$classURI}">
-            
+        <owl:Class rdf:ID="{$idref}">
+            <rdfs:label><xsl:value-of select="$className"/></rdfs:label>
+            <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+                <xsl:call-template name="FormatString">
+                    <xsl:with-param name="docAttr1" select="$documentation"/>
+                </xsl:call-template>
+            </rdfs:comment>
         </owl:Class>    
     </xsl:template>
-    
+
+    <xd:doc>
+        <xd:desc/>
+        <xd:param name="docAttr1">
+            Format the Documentation string
+        </xd:param>
+    </xd:doc>
+    <xsl:template name="FormatString" as="item()*">
+        <xsl:param name="docAttr1"/>
+        <xsl:variable name="doc0"
+            select="fn:replace($docAttr1, '&lt;a href', '&lt;xref scope=&#x0022;external&#x0022; href')"/>
+        <xsl:variable name="doc1" select="fn:replace($doc0, '&lt;/a&gt;', '&lt;/xref&gt;')"/>
+        <xsl:variable name="doc2" select="fn:replace($doc1, 'font color', 'foreign otherprops')"/>
+        <xsl:variable name="doc3" select="fn:replace($doc2, '&lt;/font&gt;', '&lt;/foreign&gt;')"/>
+        <xsl:variable name="doc4" select="fn:replace($doc3, 'nbsp', '#x00A0')"/>
+        <xsl:variable name="doc5" select="fn:replace($doc4, '\$inet://', '')"/>
+        <xsl:value-of select="$doc5"/>
+    </xsl:template>
+
 </xsl:stylesheet>
